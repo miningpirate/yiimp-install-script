@@ -1,4 +1,4 @@
-# Yiimp_install_scrypt_ubuntu18.04 (update June 14, 2018)
+# Yiimp_install_scrypt_ubuntu18.04
 
 Official Yiimp (used in this script for Yiimp Installation): https://github.com/tpruvot/yiimp
 
@@ -11,28 +11,30 @@ Install script for yiimp on Ubuntu 17.10 : https://github.com/xavatar/yiimp_inst
 
 ## Install script for yiimp on Ubuntu 18.04
 
-USE THIS SCRIPT ON FRESH INSTALL UBUNTU 18.04 !
+USE THIS SCRIPT ON FRESH INSTALL UBUNTU!
 
-NOT TESTED IN PROD !!!!!!!
+Use only for tests on a local or virtual server! NOT TESTED IN PROD!
 
 Be careful with the new Yiimp install scripts. Many of the wallets do not compile on Ubuntu above 16.04. There are workarounds, but you have to know how to do it to compile the wallets.
 
 Connect on your VPS =>
-- adduser pool
+- adduser pool (for example, change to your)
 - adduser pool sudo
 - su - pool
 - sudo apt-get -y install git
 - git clone https://github.com/xavatar/yiimp_install_scrypt_ubuntu18.04.git
 - cd yiimp_install_scrypt_ubuntu18.04/
-- sudo bash install.sh (Do not run the script as root)
-- sudo bash screen-scrypt.sh (in tuto youtube, i launch the scrypt with root... it does not matter)
-- NOT MANDATORY => sudo bash screen-stratum.sh (CONFIGURE BEFORE START this script... add or remove algo you use).
+- sudo usermod -a -G www-data pool
+- sudo bash install.sh (Do not run the script as root!)
+- sudo bash screen-scrypt.sh (Do not run the script as root!)
+- nano screen-stratum.sh (CONFIGURE BEFORE START this script... add or remove algo you use)
+- sudo bash screen-stratum.sh
 
 Finish !
 Go http://xxx.xxxxxx.xxx or https://xxx.xxxxxx.xxx (if you have chosen LetsEncrypt SSL). Enjoy !
 
 ###### :bangbang: **YOU MUST UPDATE THE FOLLOWING FILES :**
-- **/var/web/serverconfig.php :** update this file to include your public ip (line = YAAMP_ADMIN_IP) to access the admin panel (Put your PERSONNAL IP, NOT IP of your VPS). update with public keys from exchanges. update with other information specific to your server..
+- **/var/web/serverconfig.php :** update this file to include your public ip (line = YAAMP_ADMIN_IP) to access the admin panel (Put your PERSONAL IP, NOT IP of your VPS). update with public keys from exchanges. update with other information specific to your server..
 - **/etc/yiimp/keys.php :** update with secrect keys from the exchanges (not mandatory)
 
 
@@ -54,9 +56,9 @@ Go http://xxx.xxxxxx.xxx or https://xxx.xxxxxx.xxx (if you have chosen LetsEncry
 - Set stratum to AutoExchange
 - New location for /site/adminRights
 - Your Public IP for admin access (Put your PERSONNAL IP, NOT IP of your VPS)
-- Install Fail2ban
-- Install UFW and configure ports
-- Install LetsEncrypt SSL
+- Install Fail2ban (not mandatory for local server)
+- Install UFW and configure ports (not mandatory for local server)
+- Install LetsEncrypt SSL (not required for local server)
 
 ***********************************
 
@@ -66,9 +68,3 @@ While I did add some server security to the script, it is every server owners re
 
 There will be several wallets already in yiimp. These have nothing to do with the installation script and are from the database import from the yiimp github. 
 
-If you need further assistance we have a small but growing discord channel at https://discord.gg/zcCXjkQ
-
-If this helped you or you feel giving please donate : 
-- BTC Donation : 1C1hnjk3WhuAvUN6Ny6LTxPD3rwSZwapW7
-- BCH Donation : 1PqjApUdjwU9k4v1RDWf6XveARyEXaiGUz
-- ETH Donation : 0xc23E6902fF8Cd8878EDADE18Dc49B3505395F0a1
