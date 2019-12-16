@@ -23,15 +23,17 @@ Connect on your VPS =>
 - su - pool
 - sudo apt-get -y install git
 - git clone https://github.com/xavatar/yiimp_install_scrypt_ubuntu18.04.git
-- cd yiimp_install_scrypt_ubuntu18.04/
-- sudo usermod -a -G www-data pool
+- cd yiimp_install_scrypt_ubuntu18.04
 - sudo bash install.sh (Do not run the script as root!)
+- sudo usermod -a -G www-data pool
 - sudo bash screen-scrypt.sh (Do not run the script as root!)
 - nano screen-stratum.sh (CONFIGURE BEFORE START this script... add or remove algo you use)
 - sudo bash screen-stratum.sh
 
 Finish !
 Go http://xxx.xxxxxx.xxx or https://xxx.xxxxxx.xxx (if you have chosen LetsEncrypt SSL). Enjoy !
+
+!!! Don't forget to install and run daemons for your coins !!!!
 
 ###### :bangbang: **YOU MUST UPDATE THE FOLLOWING FILES :**
 - **/var/web/serverconfig.php :** update this file to include your public ip (line = YAAMP_ADMIN_IP) to access the admin panel (Put your PERSONAL IP, NOT IP of your VPS). update with public keys from exchanges. update with other information specific to your server..
