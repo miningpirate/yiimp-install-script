@@ -1,12 +1,12 @@
 #!/bin/bash
 ################################################################################
-# Original Author:   crombiecrunch
-# Fork Author: manfromafar
-# Current Author: Xavatar
+# Original Author: tpruvot
+# Fork Author: xavatar
+# Current Author: rebitcoin
 # Web:     
 #
 # Program:
-#   Install yiimp on Ubuntu 17.10 running Nginx, MariaDB, and php7.1.x
+# Install yiimp on Ubuntu 18.04 running Nginx, MariaDB, and php7.1.x
 # 
 # 
 ################################################################################
@@ -615,7 +615,7 @@ sudo chmod +x /var/stratum/config/run.sh
     sudo ln -s /etc/nginx/sites-available/$server_name.conf /etc/nginx/sites-enabled/$server_name.conf
     sudo ln -s /var/web /var/www/$server_name/html
     sudo systemctl restart nginx.service
-	sudo systemctl reload php7.2-fpm.service
+    sudo systemctl reload php7.2-fpm.service
 	
     if [[ ("$ssl_install" == "y" || "$ssl_install" == "Y") ]]; then
     
@@ -964,7 +964,5 @@ output " "
 output "Please make sure to change your wallet addresses in the /var/web/serverconfig.php file."
 output " "
 output "Please make sure to add your public and private keys."
-output " "
-output "TUTO Youtube : https://www.youtube.com/watch?v=vdBCw6_cyig"
 output " "
 output " "
