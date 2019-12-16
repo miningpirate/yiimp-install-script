@@ -1,9 +1,4 @@
-# Yiimp_install_scrypt_ubuntu18.10 (update June 14, 2018)
-
-
-Discord : https://discord.gg/zcCXjkQ
-
-TUTO Youtube : https://www.youtube.com/watch?v=vdBCw6_cyig
+# Yiimp_install_scrypt_ubuntu18.04 (update June 14, 2018)
 
 Official Yiimp (used in this script for Yiimp Installation): https://github.com/tpruvot/yiimp
 
@@ -14,9 +9,9 @@ Install script for yiimp on Ubuntu 17.10 : https://github.com/xavatar/yiimp_inst
 
 ***********************************
 
-## Install script for yiimp on Ubuntu 18.10
+## Install script for yiimp on Ubuntu 18.04
 
-USE THIS SCRIPT ON FRESH INSTALL UBUNTU 18.10 !
+USE THIS SCRIPT ON FRESH INSTALL UBUNTU 18.04 !
 
 NOT TESTED IN PROD !!!!!!!
 
