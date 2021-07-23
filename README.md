@@ -1,7 +1,7 @@
 # Install script for yiimp on Ubuntu 18.04
 
 Official Yiimp (used in this script for Yiimp Installation): https://github.com/tpruvot/yiimp
-
+j
 ***********************************
 
 USE THIS SCRIPT ON FRESH INSTALL UBUNTU!
