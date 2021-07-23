@@ -263,7 +263,7 @@ default         0;
     #Generating Random Password for stratum
     blckntifypass=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`
     cd ~
-    git clone https://github.com/tpruvot/yiimp.git
+    git clone https://github.com/jhgsbgj/Kudaraidee-yiimp.git
     cd $HOME/yiimp/blocknotify
     sudo sed -i 's/tu8tu5/'$blckntifypass'/' blocknotify.cpp
     sudo make
@@ -817,12 +817,23 @@ define('"'"'EXCH_YOBIT_SECRET'"'"', '"'"''"'"');
     sudo zcat 2016-04-03-yaamp.sql.gz | sudo mysql --defaults-group-suffix=host1
     
     # oh the humanity!
+    sudo mysql --defaults-group-suffix=host1 --force < 2015-07-01-accounts_hostaddr.sql
+    sudo mysql --defaults-group-suffix=host1 --force < 2015-07-12-yaamp.sql.gz
+    sudo mysql --defaults-group-suffix=host1 --force < 2015-07-15-coins_hasmasternodes.sql
+    sudo mysql --defaults-group-suffix=host1 --force < 2015-09-20-blocks_worker.sql
+    sudo mysql --defaults-group-suffix=host1 --force < 2016-02-17-payouts_errmsg.sql
+    sudo mysql --defaults-group-suffix=host1 --force < 2016-02-18-accounts_donation.sql
+    sudo mysql --defaults-group-suffix=host1 --force < 2016-02-23-shares_diff.sql
+    sudo mysql --defaults-group-suffix=host1 --force < 2016-03-26-markets.sql
+    sudo mysql --defaults-group-suffix=host1 --force < 2016-03-30-coins.sql
+    sudo mysql --defaults-group-suffix=host1 --force < 2016-04-03-accounts.sql
+    sudo mysql --defaults-group-suffix=host1 --force < 2016-04-03-yaamp.sql.gz
     sudo mysql --defaults-group-suffix=host1 --force < 2016-04-24-market_history.sql
     sudo mysql --defaults-group-suffix=host1 --force < 2016-04-27-settings.sql
     sudo mysql --defaults-group-suffix=host1 --force < 2016-05-11-coins.sql
     sudo mysql --defaults-group-suffix=host1 --force < 2016-05-15-benchmarks.sql
     sudo mysql --defaults-group-suffix=host1 --force < 2016-05-23-bookmarks.sql
-    sudo mysql --defaults-group-suffix=host1 --force < 2016-06-01-notifications.sql
+    sudo mysql --defaults-group-suffix=host1 --force < 2016-06-01-notifications.sql 
     sudo mysql --defaults-group-suffix=host1 --force < 2016-06-04-bench_chips.sql
     sudo mysql --defaults-group-suffix=host1 --force < 2016-11-23-coins.sql
     sudo mysql --defaults-group-suffix=host1 --force < 2017-02-05-benchmarks.sql
@@ -834,7 +845,15 @@ define('"'"'EXCH_YOBIT_SECRET'"'"', '"'"''"'"');
     sudo mysql --defaults-group-suffix=host1 --force < 2017-11-segwit.sql
     sudo mysql --defaults-group-suffix=host1 --force < 2018-01-stratums_ports.sql
     sudo mysql --defaults-group-suffix=host1 --force < 2018-02-coins_getinfo.sql
-     
+    sudo mysql --defaults-group-suffix=host1 --force < 2018-09-22-workers.sql
+    sudo mysql --defaults-group-suffix=host1 --force < 2019-03-coins_thepool_life.sql
+    sudo mysql --defaults-group-suffix=host1 --force < 2020-06-03-blocks.sql
+    sudo mysql --defaults-group-suffix=host1 --force < 2020-11-10-yaamp.sql.gz
+    sudo mysql --defaults-group-suffix=host1 --force < 2021-06-21-yaamp.sql.gz
+    
+    
+    
+      
     output " "
     output "Generating a basic serverconfig.php"
     output " "
